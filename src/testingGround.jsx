@@ -7,7 +7,7 @@ const MyApp = () => {
   return (
   <div>
     <h1>You are in Design system</h1>
-    <Header />
+    <Header level={5}>I'm from Header</Header>
     <Button onClick={() => console.log('Clicked!')} />
   </div>
   );
