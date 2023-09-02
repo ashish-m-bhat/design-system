@@ -1,6 +1,6 @@
 {
   "name": "@ashish-m-bhat/design-system",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "design-system is a framework that helps our ecosystem to design and develop consistent and quality experiences",
   "main": "index.js",
   "publishConfig": {
@@ -21,6 +21,7 @@
     "@storybook/addon-interactions": "^7.4.0",
     "@storybook/addon-links": "^7.4.0",
     "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/addon-styling": "^1.3.7",
     "@storybook/blocks": "^7.4.0",
     "@storybook/react": "^7.4.0",
     "@storybook/react-webpack5": "^7.4.0",
@@ -28,6 +29,8 @@
     "babel-loader": "^8.2.2",
     "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
+    "less": "^4.2.0",
+    "less-loader": "^11.1.3",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
