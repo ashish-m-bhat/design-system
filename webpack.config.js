@@ -5,17 +5,21 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 module.exports = {
 mode: 'development',
+entry: './src/index.jsx',
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
-        exclude: /node_modules(?!\/@ashish-m-bhat\/dummy-react-package)/
+        exclude: /node_modules/
       },
   {
    test: /\.css$/,
    use: ["style-loader", "css-loader"]
   }
 ]},
- plugins: [htmlPlugin]
+ plugins: [htmlPlugin],
+ resolve: {
+  extensions: ['.js', '.jsx'],
+},
 };
