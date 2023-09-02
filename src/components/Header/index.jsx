@@ -1,7 +1,7 @@
 import React from 'react';
 import Proptypes from 'prop-types';
 
-const Header = ({ level, children }) => {
+const Header = ({ level, styles, children }) => {
 
     const renderHeaderContent = (children) => {
         switch(level) {
@@ -21,15 +21,20 @@ const Header = ({ level, children }) => {
         }
     }
  return (
-    <header>
+    <header style={styles}>
         {renderHeaderContent(children)}
     </header>
  );
- }
+ };
 
 export default Header;
 
 Header.proptypes = {
     level: Proptypes.oneOf([1, 2, 3, 4, 5, ]),
-    children: Proptypes.node.isRequired
+    styles: Proptypes.object,
+    children: Proptypes.node.isRequired,
 }
+
+Header.defaultProps = {
+    styles: {},
+};
