@@ -12,15 +12,21 @@ function Blocks({ componentName, markdown }) {
   return (
     <>
         <Title />
+
         <h3>
           DS <code> <span>{componentName}</span> </code> component
-          </h3>
-        <Description />
-        <Primary />
-        <Controls />
+        </h3>
+
         <Markdown>
           {markdown}
         </Markdown>
+
+        <Description />
+
+        <Primary />
+
+        <Controls />
+
     </>
   )
 }

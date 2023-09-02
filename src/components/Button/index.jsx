@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cssClasses from './Button.module.less';
 
-export const Button = (props) => {
+const Button = (props) => {
   const { variant, styles, size, label, ...restProps } = props;
   return (
     <button
@@ -15,6 +15,8 @@ export const Button = (props) => {
     </button>
   );
 };
+
+export default Button;
 
 Button.propTypes = {
   variant: PropTypes.oneOf(['primary', 'secondary']),
