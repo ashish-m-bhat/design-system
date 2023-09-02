@@ -1,7 +1,6 @@
-import { Button } from "../../components/Button";
+import Button  from "../../components/Button";
 import ReadMe from './README.md?raw';
 import Blocks from "../Blocks";
-
 
 export default {
   title: 'Components/Button',

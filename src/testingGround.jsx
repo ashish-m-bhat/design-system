@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { Button } from './components/Button';
+import Button from './components/Button';
 import Header from './components/Header';
 
 const MyApp = () => {
