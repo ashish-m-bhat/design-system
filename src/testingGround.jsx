@@ -7,7 +7,7 @@ const MyApp = () => {
   return (
   <div>
     <h1>You are in Design system</h1>
-    <Header level={5}>I'm from Header</Header>
+    <Header styles={{color: 'red'}} level={5}>I'm from Header</Header>
     <Button onClick={() => console.log('Clicked!')} />
   </div>
   );
