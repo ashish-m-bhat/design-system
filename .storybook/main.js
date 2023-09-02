@@ -6,6 +6,14 @@ const config = {
     "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
+    {
+      name: '@storybook/addon-styling',
+      options: {
+        less: {
+          implementation: require('less'),
+        },
+      }
+    }
   ],
   framework: {
     name: "@storybook/react-webpack5",
