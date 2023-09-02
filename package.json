@@ -4,7 +4,7 @@
   "description": "design-system is a framework that helps our ecosystem to design and develop consistent and quality experiences",
   "main": "index.js",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@ashish-m-Bbhat"
+    "registry": "https://npm.pkg.github.com/@ashish-m-bhat"
   },
   "keywords": [],
   "author": "",
