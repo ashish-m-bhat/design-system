@@ -1,4 +1,4 @@
-import Header from './src/Header';
+import Header from './src/components/Header';
 
 export {
     Header
