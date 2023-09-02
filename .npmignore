@@ -1,1 +1,3 @@
 .github/
+babel.config.js
+webpack.config.js
