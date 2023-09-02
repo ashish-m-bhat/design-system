@@ -1,6 +1,6 @@
 {
   "name": "@ashish-m-bhat/design-system",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "design-system is a framework that helps our ecosystem to design and develop consistent and quality experiences",
   "main": "index.js",
   "publishConfig": {
@@ -17,15 +17,26 @@
     "@babel/plugin-transform-runtime": "^7.14.5",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.14.5",
+    "@storybook/addon-essentials": "^7.4.0",
+    "@storybook/addon-interactions": "^7.4.0",
+    "@storybook/addon-links": "^7.4.0",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.4.0",
+    "@storybook/react": "^7.4.0",
+    "@storybook/react-webpack5": "^7.4.0",
+    "@storybook/testing-library": "^0.2.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.4.0",
+    "storybook-dark-mode": "^3.0.1",
     "style-loader": "^3.3.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "webpack-dev-server": "^4.15.1"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -33,6 +44,8 @@
   },
   "scripts": {
     "start": "webpack serve --mode=development",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   }
 }
