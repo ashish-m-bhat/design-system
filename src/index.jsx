@@ -1,5 +1,8 @@
+import { createRoot } from 'react-dom/client';
 import React from 'react';
-const App = () => {
- return <h1>This is for Design System</h1>;
- }
-export default App;
+
+const MyApp = () => {
+  return <h1>You are in Design system</h1>
+}
+const root = createRoot(document.getElementById('root'));
+root.render(<MyApp />);
