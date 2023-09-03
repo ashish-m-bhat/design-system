@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { MdCheckCircle, MdClose, MdWarningAmber } from 'react-icons/md';
 import { IoMdCloseCircle } from 'react-icons/io';
 import cssClasses from './Snackbar.module.less'
@@ -7,10 +7,30 @@ import { snackbarConstants } from '../constants';
 function SnackbarBody({ snackbar, setSnackbar }) {
 
     const progressBarRef = useRef(null);
+    const snackbarBarRef = useRef(null);
+
+    const [pauseSnackbar, setPauseSnackbar] = useState(false);
+
+    // On finishing the timer, remove the snackbar
+    // On pause, clear the timer
+    useEffect(() => {
+        let timer;
+        if(pauseSnackbar) {
+            clearTimeout(timer);
+        } else {
+            timer = setTimeout(() => setSnackbar(null), snackbarConstants.DEFAULT_TIMEOUT);
+        }
+        return (() => {
+            timer && clearTimeout(timer);
+        });
+    }, [pauseSnackbar]);
 
     // For every 10ms, decrease the progress bar width
+    // On pause, don't decrease the width
     useEffect(() => {
+        if (pauseSnackbar) return;
         const initalBarWidth = parseFloat(window.getComputedStyle(progressBarRef.current)["width"]);
+
         let intervalId;
         intervalId = setInterval(() => {
             progressBarRef.current.style.width =
@@ -20,7 +40,7 @@ function SnackbarBody({ snackbar, setSnackbar }) {
         return(() => {
             clearInterval(intervalId);
         })
-    }, []);
+    }, [pauseSnackbar]);
 
     // Show the left icon for success, error & warning types
     const getLeftIcon = () => {
@@ -50,12 +70,31 @@ function SnackbarBody({ snackbar, setSnackbar }) {
         }
     };
 
+    // Pause the Timers (timeout & interval) when hovered
+    const onMouseEnterSnackbar = () => {
+           setPauseSnackbar(true);
+    }
+
+    const onMouseLeaveSnackbar = () => {
+        setPauseSnackbar(false);
+    }
+
+    useEffect(() => {
+        snackbarBarRef?.current?.addEventListener("mouseenter", onMouseEnterSnackbar);
+        snackbarBarRef?.current?.addEventListener("mouseleave", onMouseLeaveSnackbar);
+        return(() => {
+            snackbarBarRef?.current?.removeEventListener("mouseenter", () => onMouseEnterSnackbar);
+            snackbarBarRef?.current?.removeEventListener("mouseleave", onMouseLeaveSnackbar);
+        })
+    },[]);
+
   return (
     <div
         className={[
             cssClasses['snackbar__container'],
             cssClasses[`snackbar__container--${snackbar.variant || snackbarConstants.SUCCESS}`]
         ].join(' ')}
+        ref={snackbarBarRef}
     >
         {/* Progress Bar wrapper. Inner <p> will shrink ( to preserve flex styling*/}
         <div style={{width: '100%'}}>
