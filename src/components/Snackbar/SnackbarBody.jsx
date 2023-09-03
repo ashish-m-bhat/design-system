@@ -57,8 +57,16 @@ function SnackbarBody({ snackbar, setSnackbar }) {
             cssClasses[`snackbar__container--${snackbar.variant || snackbarConstants.SUCCESS}`]
         ].join(' ')}
     >
-        {/* Progress Bar */}
-        <p className={[cssClasses['progressBar'], cssClasses[`progressBar--${snackbar.variant}`]].join(' ')} ref={progressBarRef}></p>
+        {/* Progress Bar wrapper. Inner <p> will shrink ( to preserve flex styling*/}
+        <div style={{width: '100%'}}>
+            <p
+                className={[
+                    cssClasses['progressBar'],
+                    cssClasses[`progressBar--${snackbar.variant}`]
+                ].join(' ')}
+                ref={progressBarRef}>
+            </p>
+        </div>
 
         {/* Left icon, text message & close icon */}
         <div className={cssClasses['body']}>
