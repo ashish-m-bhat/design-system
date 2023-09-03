@@ -1,0 +1,82 @@
+.snackbar__container {
+    position: absolute;
+    bottom: 8%;
+    left: 40%;
+
+    height: 40px;
+    min-width: 300px;
+    width: auto;
+    border-radius: 1px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .progressBar {
+        width: 100%;
+        min-height: 4px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .progressBar--success {
+        background-color: green;
+    }
+    .progressBar--error {
+        background-color: red;
+    }
+    .progressBar--warning {
+        background-color: orange;
+    }
+
+    .body {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 4px 8px 4px;
+
+        .message {
+            padding: 0 8px;
+        }
+    }
+
+
+    &--success {
+        background-color: rgb(216, 246, 216);
+    }
+
+    &--error {
+        background-color: rgb(250, 230, 230);
+    }
+
+    &--warning {
+        background-color: rgb(251, 244, 230);
+    }
+
+    .success__icon {
+        color: green;
+        padding-left: 8px;
+    }
+
+    .error__icon {
+        color: red;
+        padding-left: 8px;
+    }
+
+    .warning__icon {
+        color: orange;
+        padding-left: 8px;
+    }
+
+    .close-icon {
+        cursor: pointer;
+        color: grey;
+        padding-right: 8px;
+        &:hover {
+            color: black;
+        }
+    }
+}
