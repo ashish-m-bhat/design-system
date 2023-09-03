@@ -5,9 +5,9 @@ import useSnackbar from './useSnackbar';
 import { snackbarConstants } from '../constants';
 import SnackbarBody from './SnackbarBody';
 
-// SnackBarContainer creates a portal if snackbar.show is true
+// SnackbarContainer creates a portal if snackbar.show is true
 
-function SnackBarContainer({ snackbar, setSnackbar, children }) {
+function SnackbarContainer({ snackbar, setSnackbar, children }) {
 
     let snackbarContainerDiv = document.getElementById('snackbar__container');
 
@@ -38,10 +38,10 @@ function SnackBarContainer({ snackbar, setSnackbar, children }) {
     )
 }
 
-export default SnackBarContainer;
+export default SnackbarContainer;
 export { useSnackbar };
 
-SnackBarContainer.propTypes = {
+SnackbarContainer.propTypes = {
     snackbar: PropTypes.shape({
         show: PropTypes.bool.isRequired,
         variant: PropTypes.oneOf([snackbarConstants.SUCCESS, snackbarConstants.ERROR, snackbarConstants.WARNING]),
