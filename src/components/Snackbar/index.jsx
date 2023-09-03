@@ -18,17 +18,7 @@ function SnackbarContainer({ snackbar, setSnackbar, children }) {
             snackbarContainerDiv.id = 'snackbar__container';
             document.body.appendChild(snackbarContainerDiv)
         }
-
-        // Clear the snackbar after "DEFAULT_TIMEOUT" ms
-        let timer;
-        if(snackbar?.show){
-            timer = setTimeout(() => setSnackbar(null), snackbarConstants.DEFAULT_TIMEOUT)
-        }
-        return (() => {
-            timer && clearTimeout(timer);
-        });
-
-    }, [snackbar?.show]);
+    }, []);
 
     return (
         <>
