@@ -2,13 +2,13 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Button from './components/Button';
 import Header from './components/Header';
-import SnackBarContainer, { useSnackbar} from './components/Snackbar';
+import SnackbarContainer, { useSnackbar} from './components/Snackbar';
 
 const MyApp = () => {
   const [snackbar, setSnackbar] = useSnackbar();
   return (
   <div>
-    <SnackBarContainer snackbar={snackbar} setSnackbar={setSnackbar}>
+    <SnackbarContainer snackbar={snackbar} setSnackbar={setSnackbar}>
       <h1>You are in Design system</h1>
       <Header styles={{color: 'green'}} level={5}>I'm from Header</Header>
       <Button
@@ -19,7 +19,7 @@ const MyApp = () => {
         })}
         label="Snackbar"
       />
-    </SnackBarContainer>
+    </SnackbarContainer>
     </div>
   );
 }

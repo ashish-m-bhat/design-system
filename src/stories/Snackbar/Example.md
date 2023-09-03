@@ -1,7 +1,7 @@
 Code Example
 
 ```jsx
-<SnackBarContainer snackbar={snackbar} setSnackbar={setSnackbar}>
+<SnackbarContainer snackbar={snackbar} setSnackbar={setSnackbar}>
       <Button
         onClick={() => setSnackbar({
           show: true,
@@ -9,6 +9,6 @@ Code Example
           message: "Snackbar message"
         })}
       />
-    </SnackBarContainer>
+    </SnackbarContainer>
 
 ```

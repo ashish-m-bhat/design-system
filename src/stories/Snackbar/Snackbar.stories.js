@@ -1,5 +1,5 @@
 import { Markdown } from '@storybook/blocks';
-import SnackBarContainer, { useSnackbar } from "../../components/Snackbar";
+import SnackbarContainer, { useSnackbar } from "../../components/Snackbar";
 import ReadMe from './README.md?raw';
 import Example from './Example.md?raw';
 import Blocks from "../Blocks";
@@ -7,14 +7,14 @@ import { snackbarConstants } from "../../components/constants";
 import Button from "../../components/Button";
 
 export default {
-  title: 'Components/SnackBar',
+  title: 'Components/Snackbar',
   component: SnackbarCanvas,
     parameters: {
       layout: 'centered',
       docs: {
         page: () => <>
           <Blocks
-            componentName="<SnackBarContainer />"
+            componentName="<SnackbarContainer />"
             markdown={ReadMe}
           />
           <Markdown>
@@ -39,7 +39,7 @@ export default {
 export const SnackbarCanvas = (args) => {
   const [snackbar, setSnackbar] = useSnackbar();
   return (
-    <SnackBarContainer snackbar={snackbar} setSnackbar={setSnackbar}>
+    <SnackbarContainer snackbar={snackbar} setSnackbar={setSnackbar}>
       <Button
         onClick={() => setSnackbar({
           ...args,
@@ -47,6 +47,6 @@ export const SnackbarCanvas = (args) => {
         })}
         label="Show snackbar"
         />
-    </SnackBarContainer>
+    </SnackbarContainer>
   );
 }
