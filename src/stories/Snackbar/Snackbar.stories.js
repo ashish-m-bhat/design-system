@@ -1,7 +1,7 @@
 import { Markdown } from '@storybook/blocks';
 import SnackBarContainer, { useSnackbar } from "../../components/Snackbar";
 import ReadMe from './README.md?raw';
-import Code from './Code.md?raw';
+import Example from './Example.md?raw';
 import Blocks from "../Blocks";
 import { snackbarConstants } from "../../components/constants";
 import Button from "../../components/Button";
@@ -18,7 +18,7 @@ export default {
             markdown={ReadMe}
           />
           <Markdown>
-          {Code}
+          {Example}
         </Markdown>
         </>
       },
