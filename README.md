@@ -9,4 +9,4 @@
 
     1.0.6: Snackbar Improvement: Stop timer & progress bar on hover
 
-    1.0.7: Modal
+    1.0.7: <Modal />
