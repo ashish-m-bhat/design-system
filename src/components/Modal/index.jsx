@@ -30,7 +30,7 @@ function Modal({
         });
     }, []);
   return (
-    <div>
+    <>
         {createPortal(<ModalBackdrop />, modalBackdrop)}
         {createPortal(
             <ModalOverlay
@@ -43,7 +43,7 @@ function Modal({
             />,
             modal
         )}
-    </div>
+    </>
   );
 }
 
