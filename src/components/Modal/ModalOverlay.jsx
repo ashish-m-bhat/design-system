@@ -46,32 +46,37 @@ function ModalOverlay({
     }, []);
 
     return (
-        <div className={cssClasses['modal']} style={styles} ref={modalRef}>
-            <div className={cssClasses['header']}>
-                <span className={cssClasses['title']}>{title}</span>
-                <MdClose
-                    size={25}
-                    className={cssClasses['close--icon']}
-                    onClick={closeModalHandler}
-                />
-            </div>
+        <div className={cssClasses['modal--wrapper']}>
+            <div className={cssClasses['modal']} style={styles} ref={modalRef}>
+                <div className={cssClasses['header']}>
+                    <span className={cssClasses['title']}>{title}</span>
+                    <MdClose
+                        size={25}
+                        className={cssClasses['close--icon']}
+                        onClick={closeModalHandler}
+                    />
+                </div>
 
-            <div className={cssClasses['body']}>
-                {contentNode}
-            </div>
+                <div className={cssClasses['body']}>
+                    {contentNode}
+                </div>
 
-            <div className={cssClasses['footer']}>
-                <Button
-                    variant={secondaryAction['variant']}
-                    label={secondaryAction['label']}
-                    onClick={secondaryAction['onClick']}
-                />
-                <Button
-                    variant={primaryAction['variant']}
-                    label={primaryAction['label']}
-                    onClick={primaryAction['onClick']}
-                />
+                <div className={cssClasses['footer']}>
+                    {secondaryAction &&
+                        <Button
+                            variant={secondaryAction['variant']}
+                            label={secondaryAction['label']}
+                            onClick={secondaryAction['onClick']}
+                        />}
+                    {primaryAction &&
+                    <Button
+                        variant={primaryAction['variant']}
+                        label={primaryAction['label']}
+                        onClick={primaryAction['onClick']}
+                    />
+                    }
 
+                </div>
             </div>
         </div>
   )
