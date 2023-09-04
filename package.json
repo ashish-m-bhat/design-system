@@ -1,6 +1,6 @@
 {
   "name": "@ashish-m-bhat/design-system",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "design-system is a framework that helps our ecosystem to design and develop consistent and quality experiences",
   "main": "index.js",
   "publishConfig": {
