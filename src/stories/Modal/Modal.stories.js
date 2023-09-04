@@ -45,7 +45,20 @@ export default {
 
 export const ModalCanvas = (args) => {
   const [showModal, setShowModal] = useState(false);
-  args.closeModalHandler = () => setShowModal(false);
+  const closeModal = () => setShowModal(false);
+  args = {
+    ...args,
+    closeModalHandler: closeModal,
+    primaryAction: {
+      ...args.primaryAction,
+      onClick: closeModal,
+    },
+    secondaryAction: {
+      ...args.secondaryAction,
+      onClick: closeModal,
+    }
+  };
+
   return (
     <>
       <Button
