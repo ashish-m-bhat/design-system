@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import Button from './components/Button';
+import Card from './components/Card';
 import Header from './components/Header';
 import Modal from './components/Modal';
 import { getDummyModalBody } from './components/Modal/helper';
@@ -61,6 +62,17 @@ const MyApp = () => {
           styles={{color: 'black'}}
         />
         }
+      </div>
+
+      {/* Card */}
+      <div>
+        <Card
+          styles={{}}
+          variant='clickable'
+          onClick={() => console.log('clicked')}
+        >
+          Card
+        </Card>
       </div>
 
     </SnackbarContainer>

@@ -4,3 +4,8 @@ export const snackbarConstants = {
     ERROR: 'error',
     WARNING: 'warning',
 };
+
+export const cardConstants = {
+    DEFAULT: 'default',
+    CLICKABLE: 'clickable',
+}
