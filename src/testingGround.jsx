@@ -70,6 +70,7 @@ const MyApp = () => {
           styles={{}}
           variant='clickable'
           onClick={() => console.log('clicked')}
+          classname="card-style"
         >
           Card
         </Card>
