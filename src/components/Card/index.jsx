@@ -7,6 +7,7 @@ function Card({
     variant,
     onClick,
     styles,
+    classname,
     children,
 }) {
   const clickable = variant === cardConstants.CLICKABLE;
@@ -15,7 +16,8 @@ function Card({
     <div
       className={[
         cssClasses['card'],
-        clickable ? cssClasses[`clickable`]: '']
+        clickable ? cssClasses[`clickable`]: '',
+        classname]
         .join(' ')}
       style={styles}
       onClick={clickable ? onClick : () => {}}
@@ -29,13 +31,15 @@ Card.proptypes = {
     variant: PropTypes.string,
     onClick: PropTypes.func,
     styles: PropTypes.object,
-    children: PropTypes.node.isRequired
+    classname: PropTypes.string,
+    children: PropTypes.node.isRequired,
 };
 
 Card.defaultProps = {
     variant: 'clickable',
     onClick: () => {},
-    styles: {}
+    styles: {},
+    classname: ''
 };
 
 export default Card;

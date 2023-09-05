@@ -27,7 +27,8 @@ export default {
   args: {
     styles: {},
     variant: cardConstants.CLICKABLE,
-    onClick: () => {}
+    onClick: () => {},
+    className: 'card-style',
   }
 };
 
