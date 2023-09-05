@@ -8,7 +8,7 @@ import Button from "../../components/Button";
 
 export default {
   title: 'Components/Snackbar',
-  component: SnackbarCanvas,
+  component: SnackbarContainer,
     parameters: {
       layout: 'centered',
       docs: {

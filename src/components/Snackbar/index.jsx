@@ -37,7 +37,6 @@ SnackbarContainer.propTypes = {
         variant: PropTypes.oneOf([snackbarConstants.SUCCESS, snackbarConstants.ERROR, snackbarConstants.WARNING]),
         message: PropTypes.string
     }),
-    variant: PropTypes.oneOf(['primary', 'secondary']),
     setSnackbar: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired
   };
