@@ -11,3 +11,5 @@
     1.0.7: <Modal />
     
     1.0.8: <Card />
+
+    1.0.9: <Autocomplete />
