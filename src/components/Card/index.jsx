@@ -11,7 +11,6 @@ function Card({
     children,
 }) {
   const clickable = variant === cardConstants.CLICKABLE;
-
   return (
     <div
       className={[
