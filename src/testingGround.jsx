@@ -6,6 +6,7 @@ import Card from './components/Card';
 import Header from './components/Header';
 import Modal from './components/Modal';
 import { getDummyModalBody } from './components/Modal/helper';
+import Popover from './components/Popover';
 import SnackbarContainer, { useSnackbar} from './components/Snackbar';
 
 const MyApp = () => {
@@ -80,6 +81,9 @@ const MyApp = () => {
       {/* Autocomplete */}
       <Autocomplete label={"Label goes here"} dataSet={"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae blanditiis et veniam tenetur quos porro placeat deleniti exercitationem sit, eius, quod ipsa cum eaque adipisci quia sunt sapiente impedit odio hic animi commodi corporis illo? Reprehenderit rem odit quod et veritatis commodi fugiat recusandae, expedita reiciendis nemo eveniet molestias a. Commodi odit magnam quidem, enim exercitationem sed cum. Quibusdam ab laudantium ea accusantium adipisci quaerat? Aliquid maxime vel error placeat recusandae, omnis, sint incidunt eos doloribus ullam atque cumque. Commodi eius esse ipsam amet vel neque? Debitis aut eligendi quibusdam id labore nesciunt! Ea deserunt voluptas ut illo modi eos.".split(' ')} />
 
+      <Popover popoverComponent={<p>This is a popover</p>}>
+        <p>Hover over me!</p>
+      </Popover>
     </SnackbarContainer>
     </div>
   );
